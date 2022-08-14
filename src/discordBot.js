@@ -21,8 +21,8 @@ client.on('ready', () => {
 
 //Welcome
 client.on('guildMemberAdd', async (member) => {
-    const anncouncementChannelId = process.env.ANNOUNCEMENT_CH_ID
-    const generalChannelId = process.env.GENERAL_CH_ID
+    const anncouncementChannelId = '928900003177590794'
+    const generalChannelId = '928665266311790684'
     const img = await generateImage(member)
     
     member.guild.channels.cache.get(anncouncementChannelId).send({
