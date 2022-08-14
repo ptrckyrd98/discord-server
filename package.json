@@ -1,0 +1,22 @@
+{
+  "name": "baconpatty-discord-bot",
+  "version": "1.0.0",
+  "description": "BaconPatty Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "dev": "nodemon index.js"
+  },
+  "author": "Patrick Oyardo",
+  "license": "ISC",
+  "engines": {
+    "node": "16.13.1"
+  },
+  "dependencies": {
+    "discord.js": "^13.5.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15"
+  }
+}
