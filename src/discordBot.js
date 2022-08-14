@@ -12,7 +12,8 @@ const client = new Discord.Client({
 })
 
 //Login
-client.login(process.env.DISCORDJS_BOT_TOKEN) 
+const token = "OTI4OTYyMDYyNTEwNjA4NDA0.GYCAx_.8P6oqd5SOo2zCxKsDgCt7OsFHSZWc5cKQHFD1M"
+client.login(token) 
 
 client.on('ready', () => {
     console.log(`${client.user.tag} has logged in.`)
