@@ -18,3 +18,5 @@ app.get('/', (req, res) => {
 
 //Routes
 require('./src/discordBot')
+require('./src/btcPrice')
+require('./src/ethPrice')
