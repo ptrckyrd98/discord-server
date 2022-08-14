@@ -11,7 +11,7 @@ const client = new Discord.Client({
     ]
 })
 
-//Login
+//Login 
 client.login(process.env.DISCORD_BOT_TOKEN)
 
 client.on('ready', () => {
