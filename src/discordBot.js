@@ -12,7 +12,7 @@ const client = new Discord.Client({
 })
 
 //Login
-const token = "OTI4OTYyMDYyNTEwNjA4NDA0.GYCAx_.8P6oqd5SOo2zCxKsDgCt7OsFHSZWc5cKQHFD1M"
+const token = "OTI4OTYyMDYyNTEwNjA4NDA0.Gva2RA.wTnogXWga9PjlRChZRYUPXUiUzPu65k_blN3uc"
 client.login(token) 
 
 client.on('ready', () => {
