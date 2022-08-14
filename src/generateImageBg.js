@@ -1,7 +1,7 @@
 const Canvas = require('canvas')
 const Discord  = require('discord.js')
 
-const bg = 'https://i.imgur.com/zvWTUVu.jpg'
+const bg = process.env.BG_URL
 
 const dim = {
     height: 675,

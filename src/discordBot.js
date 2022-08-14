@@ -12,8 +12,7 @@ const client = new Discord.Client({
 })
 
 //Login
-const token = "OTI4OTYyMDYyNTEwNjA4NDA0.Gva2RA.wTnogXWga9PjlRChZRYUPXUiUzPu65k_blN3uc"
-client.login(token) 
+client.login(process.env.DISCORD_BOT_TOKEN) 
 
 client.on('ready', () => {
     console.log(`${client.user.tag} has logged in.`)
@@ -21,8 +20,8 @@ client.on('ready', () => {
 
 //Welcome
 client.on('guildMemberAdd', async (member) => {
-    const anncouncementChannelId = '928900003177590794'
-    const generalChannelId = '928665266311790684'
+    const anncouncementChannelId = process.env.ANNOUNCEMENT_CH_ID
+    const generalChannelId = process.env.GEN_CH_ID
     const img = await generateImage(member)
     
     member.guild.channels.cache.get(anncouncementChannelId).send({
