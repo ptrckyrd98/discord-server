@@ -17,4 +17,4 @@ app.get('/', (req, res) => {
 })
 
 //Routes
-require('./src/discordBot')
+require('./routes/discordBotRoutes')
