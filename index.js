@@ -12,7 +12,7 @@ app.listen(port, () => {
 
 //Default Path
 app.get('/', (req, res) => {
-    res.send('Welcome to BaconPatty Discord Bot API')
+    res.send(200 , {msg: 'Welcome to BaconPatty Discord Bot API'})
     
 })
 
