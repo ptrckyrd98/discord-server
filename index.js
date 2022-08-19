@@ -20,3 +20,5 @@ app.get('/', (req, res) => {
 require('./src/discordBot')
 require('./src/btcPrice')
 require('./src/ethPrice')
+require('./src/axsPrice')
+require('./src/slpPrice')

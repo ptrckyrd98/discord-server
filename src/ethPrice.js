@@ -18,7 +18,7 @@ function getPrices() {
 			let currentPrice = res.data[0].current_price || 0 // Default to zero
 			let priceChange = res.data[0].price_change_percentage_24h || 0 // Default to zero
 			let symbol = res.data[0].symbol || '?' 
-			client.user.setActivity(`${priceChange.toFixed(2)}% | ${symbol.toUpperCase()}`, {type: 3})
+			client.user.setActivity(`${priceChange.toFixed(2)}% | ${symbol.toUpperCase()}`, { type: 3 })
 
 			client.guilds.cache.find(guild => guild.id === process.env.SERVER_ID).me.setNickname(`ETH ${process.env.CURRENCY_SYMBOL}${(currentPrice).toLocaleString().replace(/,/g,process.env.THOUSAND_SEPARATOR)}`)
 			console.log('Updated price to', currentPrice)

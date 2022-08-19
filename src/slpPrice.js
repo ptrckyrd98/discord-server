@@ -12,7 +12,7 @@ function getPrices() {
 
 
 	// API for price data.
-	axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${process.env.PREFERRED_CURRENCY}&ids=${process.env.BTC_ID}`).then(res => {
+	axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=${process.env.PREFERRED_CURRENCY}&ids=${process.env.SLP_ID}`).then(res => {
 		// If we got a valid response
 		if(res.data && res.data[0].current_price && res.data[0].price_change_percentage_24h) {
 			let currentPrice = res.data[0].current_price || 0 // Default to zero
@@ -20,11 +20,11 @@ function getPrices() {
 			let symbol = res.data[0].symbol || '?' 
 			client.user.setActivity(`${priceChange.toFixed(2)}% | ${symbol.toUpperCase()}`, { type: 3 })
 
-			client.guilds.cache.find(guild => guild.id === process.env.SERVER_ID).me.setNickname(`BTC ${process.env.CURRENCY_SYMBOL}${(currentPrice).toLocaleString().replace(/,/g,process.env.THOUSAND_SEPARATOR)}`)
+			client.guilds.cache.find(guild => guild.id === process.env.SERVER_ID).me.setNickname(`SLP ${process.env.CURRENCY_SYMBOL}${(currentPrice).toLocaleString().replace(/,/g,process.env.THOUSAND_SEPARATOR)}`)
 			console.log('Updated price to', currentPrice)
 		}
 		else
-			console.log('Could not load player count data for', process.env.BTC_ID)
+			console.log('Could not load player count data for', process.env.SLP_ID)
 
 	}).catch(err => console.log('Error at api.coingecko.com data:', err))
 }
@@ -39,4 +39,4 @@ client.on('ready', () => {
 })
 
 // Login to Discord
-client.login(process.env.BTC_BOT_TOKEN)
+client.login(process.env.SLP_BOT_TOKEN)
