@@ -31,7 +31,7 @@ function getPrices() {
 
 // Runs when client connects to Discord.
 client.on('ready', () => {
-	console.log('Logged in as', client.user.tag)
+	console.log(`${client.user.tag} has logged in.`)
 
 	getPrices() // Ping server once on startup
 	// Ping the server and set the new status message every x minutes. (Minimum of 1 minute)
