@@ -23,16 +23,16 @@ client.on('ready', () => {
 })
 
 //Welcome
-client.on('guildMemberAdd', async (member) => {
-    const img = await generateImage(member)
+// client.on('guildMemberAdd', async (member) => {
+//     const img = await generateImage(member)
     
-    member.guild.channels.cache.get(anncouncementChannelId).send({
-        content: `Hey <@${member.id}>, welcome to the server! Don't be shy. Head to the <#${generalChannelId}> and introduce yourself!`,
-        files: [img]
-    })
+//     member.guild.channels.cache.get(anncouncementChannelId).send({
+//         content: `Hey <@${member.id}>, welcome to the server! Don't be shy. Head to the <#${generalChannelId}> and introduce yourself!`,
+//         files: [img]
+//     })
 
-    member.guild.channels.cache.get(generalChannelId).send(`Hello @everyone, please welcome our new member <@${member.id}>`)
-})
+//     member.guild.channels.cache.get(generalChannelId).send(`Hello @everyone, please welcome our new member <@${member.id}>`)
+// })
 
 //Morning Message
 // const morningMsg = schedule.scheduleJob({ hour: 7, minute: 59 }, () => {
